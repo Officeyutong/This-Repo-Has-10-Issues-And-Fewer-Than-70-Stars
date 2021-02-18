@@ -26,7 +26,7 @@ async def main():
         while True:
             stars = await fetch_stars(client)
             print(stars)
-            resp = await update_repo_name(client, f"This-Repo-Not-Have-{stars+1}-Stars")
+            resp = await update_repo_name(client, f"This-Repo-Has-Less-Than-{stars+1}-Stars")
             print(resp)
             await asyncio.sleep(3)
 asyncio.get_event_loop().run_until_complete(main())
