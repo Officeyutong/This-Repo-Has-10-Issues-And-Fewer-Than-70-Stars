@@ -26,7 +26,7 @@ async def main():
             try:
                 stars, issues = await fetch_data(client)
                 print(stars, issues)
-                resp = await update_repo_name(client, f"This-Repo-Has-{issues}-Issues-And-Less-Than-{stars+1}-Stars")
+                resp = await update_repo_name(client, f"This-Repo-Has-{issues}-Issues-And-Fewer-Than-{stars+1}-Stars")
                 print(resp)
                 await asyncio.sleep(3)
             except:
